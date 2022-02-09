@@ -1,0 +1,35 @@
+<resources>
+    <!-- Preference Titles -->
+    <string name="country">国家</string>
+    <string name="operator">运营商</string>
+    <string name="function">功能</string>
+    <string name="info">运营商信息</string>
+
+    <!-- Messages Preferences -->
+    <string name="enable">Location Report 已启用</string>
+    <string name="disable">Location Report 已关闭</string>
+    <string name="apply">应用</string>
+
+    <!-- Function Preferences -->
+    <string name="enable_report">启用 Location Report</string>
+    <string name="clear_gms_data">清除 Play Service 数据</string>
+    <string name="clear_maps_data">清除 Google Maps 数据</string>
+    <string name="reboot">重启</string>
+    <string name="hide_from_launcher">从启动器中隐藏图标</string>
+
+    <!--    menu-->
+    <string name="menu_switch">开关</string>
+
+    <array name="sim_operator">
+        <item>类型：</item>
+        <item>国家：</item>
+        <item>国家代码：</item>
+        <item>MCC：</item>
+        <item>MNC：</item>
+        <item>商标：</item>
+        <item>运营商：</item>
+        <item>状况：</item>
+        <item>网络类型：</item>
+        <item>备注：</item>
+    </array>
+</resources>

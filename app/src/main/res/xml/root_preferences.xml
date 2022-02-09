@@ -1,0 +1,53 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/operator">
+
+        <cn.tabidachinokaze.locationreportenabler.view.OperatorListPreference
+            app:icon="@drawable/ic_baseline_public_24"
+            app:key="country"
+            app:title="@string/country"
+            app:useSimpleSummaryProvider="true" />
+
+        <cn.tabidachinokaze.locationreportenabler.view.OperatorListPreference
+            app:icon="@drawable/ic_baseline_sim_card_24"
+            app:key="operator"
+            app:title="@string/operator"
+            app:useSimpleSummaryProvider="true" />
+
+        <Preference
+            app:key="info"
+            app:icon="@drawable/ic_baseline_info_24"
+            app:title="@string/info" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/function">
+
+        <SwitchPreferenceCompat
+            app:key="switch_enable_report"
+            app:summaryOff="@string/disable"
+            app:summaryOn="@string/enable"
+            app:title="@string/enable_report" />
+
+        <CheckBoxPreference
+            app:dependency="switch_enable_report"
+            app:key="check_gms"
+            app:title="@string/clear_gms_data" />
+
+        <CheckBoxPreference
+            app:dependency="switch_enable_report"
+            app:key="check_maps"
+            app:title="@string/clear_maps_data" />
+
+        <CheckBoxPreference
+            app:dependency="switch_enable_report"
+            app:key="check_reboot"
+            app:title="@string/reboot" />
+
+        <CheckBoxPreference
+            app:dependency="switch_enable_report"
+            app:key="check_hide"
+            app:title="@string/hide_from_launcher" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

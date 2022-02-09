@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name" translatable="false">Location Report Enabler</string>
+    <!-- Preference Titles -->
+    <string name="country">Country</string>
+    <string name="operator">Operator</string>
+    <string name="function">Function</string>
+    <string name="info">Operator Info</string>
+
+    <!-- Messages Preferences -->
+    <string name="enable">Location Report is enabled.</string>
+    <string name="disable">Location Report is disabled.</string>
+    <string name="apply">Apply</string>
+
+    <!-- Function Preferences -->
+    <string name="enable_report">Enable Location Report</string>
+    <string name="clear_gms_data">Clear the data of Play Service</string>
+    <string name="clear_maps_data">Clear the data of Google Maps</string>
+    <string name="reboot">Reboot</string>
+    <string name="hide_from_launcher">Hide icon from launcher</string>
+
+    <!--    menu-->
+    <string name="menu_switch">Switch</string>
+
+    <array name="sim_operator">
+        <item>Type:</item>
+        <item>Country Name:</item>
+        <item>Country Code:</item>
+        <item>MCC:</item>
+        <item>MNC:</item>
+        <item>Brand:</item>
+        <item>Operator:</item>
+        <item>Status:</item>
+        <item>Bands:</item>
+        <item>Notes:</item>
+    </array>
+</resources>
