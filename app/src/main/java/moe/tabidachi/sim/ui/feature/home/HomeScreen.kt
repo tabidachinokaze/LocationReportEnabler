@@ -39,6 +39,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -52,6 +53,7 @@ fun HomeScreen(
     state: HomeState = HomeState(),
     actions: HomeActions = HomeActions()
 ) {
+    val context = LocalContext.current
     Scaffold(
         topBar = {
             TopAppBar(
@@ -68,7 +70,8 @@ fun HomeScreen(
                                 text = {
                                     Text(text = "源码")
                                 }, onClick = {
-                                    actions.aboutClick()
+                                    actions.menuExpandedChange(false)
+                                    actions.aboutClick(context)
                                 }, trailingIcon = {
                                     Icon(
                                         imageVector = Icons.Rounded.Code,

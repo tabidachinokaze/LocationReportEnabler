@@ -1,5 +1,6 @@
 package moe.tabidachi.sim.ui.feature.home
 
+import android.content.Context
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.staticCompositionLocalOf
@@ -37,7 +38,7 @@ data class HomeActions(
     val setOperator: (SimOperator) -> Unit = {},
     val done: () -> Unit = {},
     val menuExpandedChange: (Boolean) -> Unit = {},
-    val aboutClick: () -> Unit = {}
+    val aboutClick: (Context) -> Unit = {}
 )
 
 /**

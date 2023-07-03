@@ -1,9 +1,10 @@
 package moe.tabidachi.sim.ui.feature.home
 
 import android.app.Application
-import android.content.Intent
+import android.content.Context
 import android.net.Uri
 import android.telephony.TelephonyManager
+import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.getSystemService
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
@@ -22,6 +23,7 @@ import moe.tabidachi.sim.data.database.entity.Country
 import moe.tabidachi.sim.data.database.entity.SimOperator
 import moe.tabidachi.sim.ktx.toast
 import javax.inject.Inject
+
 
 @HiltViewModel
 class HomeViewModel @Inject constructor(
@@ -141,10 +143,10 @@ class HomeViewModel @Inject constructor(
         }
     }
 
-    fun aboutClick() {
-        val intent = Intent(Intent.ACTION_VIEW)
-        intent.data = Uri.parse("https://github.com/tabidachinokaze/LocationReportEnabler")
-        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
-        context.startActivity(intent)
+    fun aboutClick(context: Context) {
+        val uri = Uri.parse("https://github.com/tabidachinokaze/LocationReportEnabler")
+        val intent = CustomTabsIntent.Builder()
+            .build()
+        intent.launchUrl(context, uri)
     }
 }
